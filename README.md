@@ -51,6 +51,8 @@ evaluation/
   scorecard.csv                     plain-text version of the scoring layout
   demo-script.md                    scenario as a live demo run sheet with pass/fail checks
   procurement-questions.md          written questions for vendors (hosting, access, exit)
+  vendor-email-template.md          one email per vendor: scenario, demo request, written questions
+  dry-run/                          Claude run blind on the demo data, scored against the answer key
 product/
   mvp-requirements.md               P0/P1/P2 features
   ropa-record-template.md           controller and processor records with source/status/owner

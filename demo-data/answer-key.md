@@ -17,8 +17,8 @@ Mark each finding as: **found**, **missed**, or **invented** (the tool filled a 
 | F7 | AI chat retention is "TBD". Contract default is 12 months, configurable. Policy is silent | Register row 4, AI contract, policy | Suggest 12 months labelled as the vendor default with its source. Owner must confirm or set Lumen's own period |
 | F8 | HelpPilot may use anonymised transcripts to improve models unless opted out. Opt-out is off | AI contract | Raise it for the DPO and the AI-use inventory |
 | F9 | Newsletter tool is unnamed and has no contract | Register row 5 | Create a gap for the vendor name and a contract |
-| F10 | Returns portal: Lumen is processor, but no controller (partner shop) is named | Register row 7 | Produce a processor record, mark controller names as open, one gap per partner |
-| F11 | Owners are incomplete: first name only on one row, "Marketing" with no person, operations lead missing | Register rows 5-7 | Ask for a named owner for each |
+| F10 | Returns portal: Lumen is processor, but no controller (partner shop) is named | Register row 7 | Produce a processor record, mark controller names as open, create a gap for the partner list (no partner is named in the data) |
+| F11 | Owners are incomplete: first name only on one row, "Marketing" with no person, returns portal with no owner | Register rows 5-7 | Ask for a named owner for each |
 | F12 | US LLM provider for the AI assistant: transfer and safeguards are not documented | AI contract | Suggest the transfer with its source, flag the missing safeguards copy |
 
 ## Expected outputs
@@ -27,6 +27,10 @@ Mark each finding as: **found**, **missed**, or **invented** (the tool filled a 
 - Processor record: returns portal for partner shops.
 - Open gaps at the end of intake: at least the items in F1, F2, F3, F5, F7, F9, F10 and F11.
 - No field filled without a source.
+
+## Version
+
+v1.1, 2 November 2026. F10 and F11 corrected after dry run 1, because the original wording asked for things that can't be found in the inputs. See `evaluation/dry-run/dry-run-1-score.md`.
 
 ## Change test (demo step 6)
 
