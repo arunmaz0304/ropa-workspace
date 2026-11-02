@@ -7,7 +7,7 @@ Rules:
 - The Status column on each field is one of: `suggested` (from a document or extraction, unchecked), `owner-stated` (a named person told us), `confirmed` (the owner confirmed this value on this date). A vendor change with a future start date is also marked `announced`, with its effective date. See `workflow-spec.md`, section 2.
 - The state of the whole record is separate: `open`, `draft`, `owner-confirmed`, `dpo-reviewed`, `approved`. See `workflow-spec.md`, section 4.
 - Version numbers belong to approved versions. A record that has never been approved has no version number.
-- Check current Article 30 text and local guidance before relying on this template.
+- Article 30 field list checked against the regulation text on 2 November 2026 (30(1)(a) to (g), 30(2)(a) to (d), 30(5)). Note that 30(1)(f) and (g) and 30(2)(d) apply "where possible", and the safeguards documentation in (e) and 30(2)(c) applies to certain transfers only. Check current text and local guidance before relying on this template.
 
 ## Activity header (both roles)
 
