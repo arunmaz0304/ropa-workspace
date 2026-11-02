@@ -15,14 +15,17 @@ Use this for every vendor demo and every build test. Fill the framing block firs
 
 > We are an EU company using a CRM, payroll system, recruitment platform, and AI customer-support assistant. We already have an Excel register, supplier contracts, and a retention policy. Show us how you import these, identify missing information, validate it with owners, and produce separate controller and processor records.
 
-## Inputs to prepare before any demo
+## Inputs for the demo
 
-| Input | Notes |
-|---|---|
-| Excel register | Messy on purpose: some rows complete, some missing retention, one with the wrong role |
-| Supplier contracts | At least 3: CRM vendor, payroll provider, AI support assistant vendor |
-| Retention policy | Covers some but not all activities |
-| Named owners | Sales lead, HR lead, support lead, plus a DPO (internal or external) |
+Ready-made fictional inputs are in [`demo-data/`](demo-data/) (a made-up Swedish retailer, Lumen Outdoor AB). Use them as they are, or swap in your own with the same shape.
+
+| Input | In `demo-data/` | Notes |
+|---|---|---|
+| Excel register | `excel-register.xlsx` (and `.csv`) | Messy on purpose: missing retention, a conflict with the policy, a duplicate row, a wrong role |
+| Supplier contracts | `contracts-pdf/` (and `contracts/` as markdown) | CRM vendor, payroll provider, AI support assistant. No contract for recruitment or the newsletter tool, deliberately |
+| Retention policy | `retention-policy.md` | Covers some activities, not all |
+| Named owners | listed in `demo-data/README.md` | Sales lead, HR lead, support lead, external DPO. One owner is missing on purpose |
+| Answer key | `answer-key.md` | 12 planted findings. Keep it away from vendors until after the demo |
 
 Use fictional data, not real client data, in vendor demos.
 

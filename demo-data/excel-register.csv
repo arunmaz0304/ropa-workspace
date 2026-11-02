@@ -1,0 +1,8 @@
+Activity,System,Owner,Purpose,Whose data,What data,Shared with,Keep for,Outside EU?,Our role,Last updated
+Customer management,ClientHub CRM,Maja Lindqvist,Manage customer relationships and sales follow-up,Customers and prospects,"Name, email, phone, purchase history",ClientHub,7 years,No,Controller,2024-03
+Payroll,PayLedger Nordic,Erik Holm,Pay salaries and report to authorities,Employees,"Name, personal ID number, bank account, salary, absence",PayLedger; Skatteverket,7 years after year-end,,Controller,2024-03
+Recruitment,TalentTrail,Erik Holm,Hiring,Applicants,"CV, contact details, interview notes",TalentTrail,,,Controller,2023-11
+AI customer support,HelpPilot AI,Sofia Nyberg,AI chat,Customers,Chat logs,HelpPilot,TBD,?,Processor,2025-01
+Newsletter,,Marketing,Email marketing,Customers,Email address,Mailer tool,Until unsubscribe,No,Controller,2023-06
+Customers - CRM,ClientHub,Maja,Sales,Customers,"Name, email",,5 years,,Controller,2022-09
+Returns portal for partner shops,In-house portal,,Handle returns for partner shops,Partner shops' customers,"Name, address, order number",,Per partner contract,No,Processor,2024-08

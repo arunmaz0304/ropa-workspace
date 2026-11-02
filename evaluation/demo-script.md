@@ -8,6 +8,8 @@ Opening line to the vendor:
 
 > We are an EU company using a CRM, payroll system, recruitment platform, and AI customer-support assistant. We already have an Excel register, supplier contracts, and a retention policy. Show us how you import these, identify missing information, validate it with owners, and produce separate controller and processor records.
 
+Use the files in [`demo-data/`](../demo-data/). After each demo, compare what the tool did against [`demo-data/answer-key.md`](../demo-data/answer-key.md) and mark each of the 12 findings as found, missed or invented. Step 6 uses the change test at the bottom of the answer key.
+
 | # | Step | Ask the vendor to | Pass check | Criterion |
 |---|---|---|---|---|
 | 1 | Import | Import the Excel register and the supplier contracts live | Activities appear with fields filled from the files | Evidence and auditability |

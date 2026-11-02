@@ -39,7 +39,7 @@ Rule that runs through every step: a field is either sourced or open. Never gues
 
 What happens: existing documents (Excel register, supplier contracts, retention policy) go in, candidate values come out with their source, unsupported fields stay empty.
 
-**Evaluate.** Run demo steps 1 and 2 in `evaluation/demo-script.md`. Note what the tool imports, what it invents, and whether each value shows its source.
+**Evaluate.** Run demo steps 1 and 2 in `evaluation/demo-script.md` with the files in `demo-data/`. Note what the tool imports, what it invents, and whether each value shows its source. Check the result against `demo-data/answer-key.md`.
 
 **Build.** Design the intake: business-language questions per activity, the evidence model (value + source reference + confidence note), and the rule that unsupported means blank. See `product/workflow-spec.md`, sections 1 and 2.
 
