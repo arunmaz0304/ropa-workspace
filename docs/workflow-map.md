@@ -78,7 +78,7 @@ flowchart LR
     R --> M{"Does it change an Article 30 field?"}
     M -- No --> N["Log only"]
     M -- Yes --> Q["New working draft. Approved version stays official until replaced. DPO is told"]
-    Q --> V["One owner task and one DPO task per record. Owner revalidates, DPO reviews, approver signs off"]
+    Q --> V["One owner task per record. Owner revalidates. DPO review task opens when the owner confirms. Approver signs off"]
 ```
 
 ## Which file belongs to which step

@@ -4,7 +4,7 @@ Two structures, one per role. The Article 30 fields are statutory. The Source, S
 
 Rules:
 - A value without a source stays empty and gets a gap.
-- The Status column on each field is one of: `suggested` (from a document or extraction, unchecked), `owner-stated` (a named person told us), `confirmed` (the owner has confirmed the whole record). See `workflow-spec.md`, section 2.
+- The Status column on each field is one of: `suggested` (from a document or extraction, unchecked), `owner-stated` (a named person told us), `confirmed` (the owner confirmed this value on this date). A vendor change with a future start date is also marked `announced`, with its effective date. See `workflow-spec.md`, section 2.
 - The state of the whole record is separate: `open`, `draft`, `owner-confirmed`, `dpo-reviewed`, `approved`. See `workflow-spec.md`, section 4.
 - Version numbers belong to approved versions. A record that has never been approved has no version number.
 - Check current Article 30 text and local guidance before relying on this template.

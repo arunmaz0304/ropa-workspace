@@ -2,7 +2,7 @@
 
 Written so it can become an n8n flow or a Lovable build. Product design, not legal requirement.
 
-Version 0.2, 2 November 2026. Section 10 records the decisions made after the change test.
+Version 0.3, 2 November 2026. Sections 10 and 11 record the decisions made after the change tests.
 
 ## 1. Intake
 
@@ -39,7 +39,9 @@ Never a value without a source. A source is a document with page or row, or a pe
 |---|---|
 | suggested | Taken from a document or an extraction. Nobody has checked it |
 | owner-stated | A named person told us. Counts as sourced |
-| confirmed | The owner has confirmed the whole record |
+| confirmed | The owner confirmed this value on this date. Whether the whole record is currently confirmed is shown by the record state |
+
+A vendor notice with a future start date (for example a new sub-processor) is recorded on receipt and marked `announced` with its effective date. If the notice gives no date, a gap asks for it. When a record returns to draft or a working draft opens, fields nobody touched keep `confirmed` with their date, so the owner re-checks only what changed.
 
 ## 3. Gap to action
 
@@ -53,16 +55,16 @@ Gap object:
 | activity_id, field | What is missing |
 | question | One plain-language question for the owner |
 | owner | Named person, by activity |
-| due_date | Default set per organisation |
-| priority | 1 unsupported or conflicting Article 30 field, 2 missing detail |
-| status | open / answered / escalated / closed |
-| escalation | Who is told if overdue |
+| due_date | 14 days after the gap is opened, unless the organisation sets another default |
+| priority | 1 unsupported or conflicting Article 30 field, or missing evidence for an AI setting or a transfer safeguard. 2 missing detail |
+| status | open / escalated / closed. A gap is closed when answered |
+| escalation | The DPO, told once |
 
 Rules:
 - One question per gap.
 - No gap without an owner. If none is known, the gap goes to the DPO or workspace admin.
 - Answering a gap fills the field with `source_ref` = the answerer and date, status `owner-stated`.
-- An owner-stated change to an AI setting or a transfer safeguard also creates a gap asking for evidence, such as a screenshot or the vendor's confirmation.
+- An owner-stated change to an AI setting or a transfer safeguard also creates a separate gap asking for evidence, such as a screenshot or the vendor's confirmation. The first gap still closes when answered.
 - The owner sees the gaps for one record as a single list, priority 1 first, five at a time. The rest appear as these are answered.
 - Overdue gaps escalate once, then show on the DPO view.
 
@@ -87,7 +89,7 @@ open -> draft -> owner-confirmed -> dpo-reviewed -> approved
 | approved | approver (DPO or controller's designated person) | Current official version |
 
 Rules:
-- Each transition records who (a person or "system"), when, and the trigger.
+- Every change in the log shows who reported it (the person who told us, if any), who recorded it (a person, or "system"), when, and the trigger.
 - A material change to an approved record opens a new working draft. The approved version stays official, marked "change pending", until the draft is approved and replaces it.
 - A material change to an owner-confirmed or dpo-reviewed record sends it back to draft.
 - The system moves a record back to draft when a material change is recorded. The owner or DPO can also send it back by hand.
@@ -113,7 +115,10 @@ Triggers:
 Rules:
 - Material change = anything that changes an Article 30 field value. Metadata edits aren't material.
 - The DPO is told of every material change to a record that is dpo-reviewed or approved, whatever the table says.
-- One owner task and one DPO review task per record, covering all pending changes. Not one per event. The specific questions stay as gaps.
+- One owner task per record, created at the first material change and covering all pending changes. Not one per event. The specific questions stay as gaps.
+- One DPO review task per record, created when the record reaches owner-confirmed. Before that the DPO gets a notice of each material change, not a task.
+- A vendor notice with a future start date is recorded on receipt, in the working draft, marked `announced`. The official version changes only when the draft is approved.
+- Country check: the system holds a reference list of EEA countries and applies it to a new sub-processor's country. The result is marked a general-knowledge check and the DPO confirms it. A country not on the list always raises a transfer gap.
 
 ## 6. Roles
 
@@ -176,11 +181,11 @@ Also changed after the two dry runs:
 - **Jargon.** Plain words first, legal terms in brackets.
 - **Draft versus open.** A record with any empty required field is `open`. The test baseline had drafts with empty fields.
 
-## 11. Open questions from dry run 3
+## 11. Decisions from dry run 3
 
-Raised by the change test against the rules above, in `evaluation/dry-run/dry-run-3-score.md`. Each has a proposed default. **None is applied yet.** Sections 2 to 6 still say what they said before. Accept or change each default, then update those sections.
+Raised by the change test in `evaluation/dry-run/dry-run-3-score.md`. Decided on 2 November 2026 by Claude, on instruction, as defaults, and applied to sections 2 to 5. Change any you disagree with and update those sections to match.
 
-| # | Question | Proposed default | Why |
+| # | Question | Decision | Why |
 |---|---|---|---|
 | 1 | A vendor announces a new sub-processor with a future start date. Record it on receipt, or on the effective date? | On receipt, in the working draft, marked "announced" with a gap for the effective date. The official version changes only when the draft is approved | The notice period is when the owner and the DPO can still object. Reviewing early uses it |
 | 2 | A record returns to draft, or a working draft opens. What status do the fields nobody touched keep? | They keep `confirmed`, with the date. The record state shows the record as a whole isn't currently confirmed. Change the definition of `confirmed` to "the owner confirmed this value on this date" | The owner can see which fields changed and re-check only those |
