@@ -175,3 +175,17 @@ Also changed after the two dry runs:
 - **Too many gaps.** One question per gap, shown to the owner five at a time, priority first. Run 1 produced 40 gaps for 6 activities, and some run 2 gaps asked four questions.
 - **Jargon.** Plain words first, legal terms in brackets.
 - **Draft versus open.** A record with any empty required field is `open`. The test baseline had drafts with empty fields.
+
+## 11. Open questions from dry run 3
+
+Raised by the change test against the rules above, in `evaluation/dry-run/dry-run-3-score.md`. Each has a proposed default. **None is applied yet.** Sections 2 to 6 still say what they said before. Accept or change each default, then update those sections.
+
+| # | Question | Proposed default | Why |
+|---|---|---|---|
+| 1 | A vendor announces a new sub-processor with a future start date. Record it on receipt, or on the effective date? | On receipt, in the working draft, marked "announced" with a gap for the effective date. The official version changes only when the draft is approved | The notice period is when the owner and the DPO can still object. Reviewing early uses it |
+| 2 | A record returns to draft, or a working draft opens. What status do the fields nobody touched keep? | They keep `confirmed`, with the date. The record state shows the record as a whole isn't currently confirmed. Change the definition of `confirmed` to "the owner confirmed this value on this date" | The owner can see which fields changed and re-check only those |
+| 3 | What is the default gap due date, and who is told when one is overdue? | 14 days after the gap is opened. The DPO is told once, then it shows on the DPO view | Section 3 says "set per organisation" and "who is told if overdue", but gives no value. The agent used 14 days from the event date and guessed |
+| 4 | When is the DPO review task created? | The DPO is told at once, with a notice. The review task is created when the record reaches `owner-confirmed`, because the DPO can't review before then | The agent created DPO tasks for records the DPO couldn't yet review. Cuts the task count too: after the five events in the test, three owner tasks instead of six tasks |
+| 5 | When does a gap count as closed, and what priority does an evidence gap get? | A gap is closed when answered. If the answer needs evidence, the evidence is a separate gap, priority 1 for an AI setting or a transfer safeguard, priority 2 otherwise | The agent asked itself whether "answered" and "closed" differ, and chose priority 2 for an evidence gap when priority 1 was arguable |
+| 6 | An owner reports a change by email or message and the system records it. Who is logged? | Both: "reported by" the person, "recorded by" system. Metadata edits entered by a person show that person | Run 2 did this. Run 3 logged "system" for some and a person for others |
+| 7 | Who decides that a new sub-processor's country is outside the EU/EEA? | The system holds a reference list of EEA countries and applies it. The result is marked as a general-knowledge check, and the DPO confirms it. A country not on the list always raises a transfer gap | In both runs the agent had to use outside knowledge for Norway and said so. A reference list makes that explicit and repeatable |
