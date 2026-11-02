@@ -47,4 +47,4 @@ Do both:
 1. Tell the tool that ClientHub is adding a new analytics sub-processor.
 2. Change CRM retention to 5 years after last purchase.
 
-A good tool flags the CRM activity, routes it to Maja Lindqvist and Anna Berg, returns the record to draft, and requires revalidation. A weak tool changes the field silently.
+A good tool flags the CRM activity, routes it to Maja Lindqvist and Anna Berg, opens a new working draft (the approved version stays official, marked "change pending"), and requires revalidation. A weak tool changes the field silently.
