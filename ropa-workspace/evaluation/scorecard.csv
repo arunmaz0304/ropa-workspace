@@ -1,0 +1,9 @@
+criterion,weight_percent,vendor_a,vendor_b,vendor_c,evidence_notes
+Register quality and appropriate Article 30 output,20,,,,
+Business-owner usability,20,,,,
+Evidence and auditability,20,,,,
+Maintenance and change handling,15,,,,
+Integration and discovery fit,10,,,,
+Wider privacy/AI workflow links,5,,,,
+"Total cost, hosting, and exit terms",10,,,,
+WEIGHTED TOTAL (0-100),100,,,,"= sum of (weight x score / 5) per vendor"

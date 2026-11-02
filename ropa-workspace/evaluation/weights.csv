@@ -1,0 +1,8 @@
+criterion,weight_percent,what_to_test,reason_if_changed
+Register quality and appropriate Article 30 output,20,"Required fields, role separation, useful exports",
+Business-owner usability,20,"Can a non-lawyer complete and maintain an activity?",
+Evidence and auditability,20,"Sources, approvals, version history, unanswered questions",
+Maintenance and change handling,15,"Linked updates, reminders, impact routing, revalidation",
+Integration and discovery fit,10,"Your actual systems, not the advertised connector count",
+Wider privacy/AI workflow links,5,"Reuse of records without duplicate entry",
+"Total cost, hosting, and exit terms",10,"Modules, implementation, support access, subprocessors, complete export",
