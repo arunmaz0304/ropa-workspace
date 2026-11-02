@@ -46,8 +46,9 @@ demo-data/                          fictional inputs for the scenario (Lumen Out
   retention-policy.md               covers some activities, not all
   answer-key.md                     12 planted findings to score tools against
 evaluation/
-  weights.csv                       scoring criteria and weights (editable)
-  scorecard.csv                     score vendors 0-5 per criterion
+  scorecard.xlsx                    working scorecard: weighted totals, P0 gate, filled example
+  weights.csv                       default weights as plain text (the spreadsheet is the working copy)
+  scorecard.csv                     plain-text version of the scoring layout
   demo-script.md                    scenario as a live demo run sheet with pass/fail checks
   procurement-questions.md          written questions for vendors (hosting, access, exit)
 product/

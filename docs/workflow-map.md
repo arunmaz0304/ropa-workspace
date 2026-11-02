@@ -89,4 +89,4 @@ flowchart LR
 | 3 Gap to action | `evaluation/demo-script.md` step 3 | `product/workflow-spec.md` section 3 |
 | 4 Validate and approve | `evaluation/demo-script.md` steps 4, 5, 7 | `product/workflow-spec.md` section 4, `product/ropa-record-template.md` |
 | 5 Maintain and change | `evaluation/demo-script.md` step 6 | `product/workflow-spec.md` section 5 |
-| 6 Decide or ship | `evaluation/procurement-questions.md`, `evaluation/scorecard.csv` | `product/workflow-spec.md` sections 7-9 |
+| 6 Decide or ship | `evaluation/procurement-questions.md`, `evaluation/scorecard.xlsx` (scores, P0 gate) | `product/workflow-spec.md` sections 7-9 |

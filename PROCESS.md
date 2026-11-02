@@ -95,7 +95,7 @@ This is where the choice should be decided. Discovery gets you a first draft. Ma
 
 **Evaluate.**
 1. Send `evaluation/procurement-questions.md` to shortlisted vendors, in writing.
-2. Complete `evaluation/scorecard.csv`.
+2. Complete `evaluation/scorecard.xlsx`: score the criteria and mark the P0 gate. Totals and the build-or-choose verdict calculate themselves.
 3. Recommend, with the maintenance score front and centre. Don't infer hosting or support access from a vendor's headquarters or marketing.
 
 **Build.**
