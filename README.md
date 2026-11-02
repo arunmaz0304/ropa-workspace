@@ -11,7 +11,7 @@ This is a product hypothesis, not a proven market gap. Existing tools already co
 
 ## Start here
 
-Read [PROCESS.md](PROCESS.md). Seven steps, each with an Evaluate lane, a Build lane, one output and a "done when" check.
+Read [PROCESS.md](ropa-workspace/PROCESS.md). Seven steps, each with an Evaluate lane, a Build lane, one output and a "done when" check.
 
 ## Repo map
 
