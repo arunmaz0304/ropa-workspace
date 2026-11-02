@@ -127,3 +127,15 @@ A PDF alone doesn't count as an export.
 - Extraction of candidate values with source spans: Claude API, with an explicit "no support found" output
 - Routing, reminders, revalidation triggers: n8n
 - Storage: EU/EEA region; decide who is processor for uploaded client documents before first real client data
+
+## 10. Open questions
+
+Raised by the change test in `evaluation/dry-run/dry-run-2-score.md`. The rules above don't settle them. Decide each one, then update sections 4 and 5.
+
+1. Who moves a record back to draft on a trigger: the system, the owner, or anyone with edit rights?
+2. While a new version is a draft, does the approved version stay the official one?
+3. Does a record that was never approved get a new version when it returns to draft?
+4. Are cosmetic edits to an approved record versioned?
+5. Are owner statements stored as "suggested" until the owner confirms the whole record, or as confirmed?
+6. Who is routed for a settings change, such as switching an AI opt-out? The change table has no row for it.
+7. Does the DPO hear about every material change to a record they approved, even when the table routes only to the owner?

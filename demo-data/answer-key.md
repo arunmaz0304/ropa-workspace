@@ -21,6 +21,14 @@ Mark each finding as: **found**, **missed**, or **invented** (the tool filled a 
 | F11 | Owners are incomplete: first name only on one row, "Marketing" with no person, returns portal with no owner | Register rows 5-7 | Ask for a named owner for each |
 | F12 | US LLM provider for the AI assistant: transfer and safeguards are not documented | AI contract | Suggest the transfer with its source, flag the missing safeguards copy |
 
+## Bonus finding
+
+Not planted on purpose, found in dry run 2.
+
+| # | Finding | Where | A good tool should |
+|---|---|---|---|
+| B1 | The retention policy lists website analytics data and accounting documents, but neither activity is in the register | Policy, register | Ask whether those activities exist, who owns them, and which tools they use |
+
 ## Expected outputs
 
 - Controller records: customer management, payroll, recruitment, AI customer support, newsletter.
