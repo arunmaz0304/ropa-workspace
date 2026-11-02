@@ -194,3 +194,19 @@ Raised by the change test in `evaluation/dry-run/dry-run-3-score.md`. Decided on
 | 5 | When does a gap count as closed, and what priority does an evidence gap get? | A gap is closed when answered. If the answer needs evidence, the evidence is a separate gap, priority 1 for an AI setting or a transfer safeguard, priority 2 otherwise | The agent asked itself whether "answered" and "closed" differ, and chose priority 2 for an evidence gap when priority 1 was arguable |
 | 6 | An owner reports a change by email or message and the system records it. Who is logged? | Both: "reported by" the person, "recorded by" system. Metadata edits entered by a person show that person | Run 2 did this. Run 3 logged "system" for some and a person for others |
 | 7 | Who decides that a new sub-processor's country is outside the EU/EEA? | The system holds a reference list of EEA countries and applies it. The result is marked as a general-knowledge check, and the DPO confirms it. A country not on the list always raises a transfer gap | In both runs the agent had to use outside knowledge for Norway and said so. A reference list makes that explicit and repeatable |
+
+## 12. Open questions from dry run 4
+
+Raised by the change test in `evaluation/dry-run/dry-run-4-score.md`. Each has a proposed default. **None is applied yet.** Sections 2 to 6 still say what they said before. Accept or change each default, then update those sections.
+
+| # | Question | Proposed default | Why |
+|---|---|---|---|
+| 1 | What due date does an owner task get, and what if an announced effective date arrives before the draft is approved? | The task is due on the latest due date among its open gaps, but never later than 7 days before the earliest announced effective date. If an effective date passes with the draft unapproved, the DPO is told and the official version shows "out of date from <date>" | In the test the task was due before its own gaps, and nothing connected approval to a sub-processor's start date |
+| 2 | A field can hold old confirmed text and a new owner-stated part. What status does it show? | The field shows the lowest status of any part (suggested, then owner-stated, then confirmed). The log names the changed part. `announced` stays a separate marker, not a status | A field has one status, and the lowest one is the honest one for the owner to re-check |
+| 3 | A later vendor document contradicts an earlier one. Which value shows in the draft? | The newest document's value, flagged "conflict", with both sources linked, until the owner resolves it. A priority-1 gap is opened | The agent did this unprompted. It keeps the conflict visible and avoids silently keeping the older value |
+| 4 | When a record returns to draft, is a DPO review task created again? | One DPO review task exists per record at a time. It is created when the record reaches `owner-confirmed`, closed if the record goes back to draft, and created again at the next `owner-confirmed` | No stale tasks, and the "one per record" rule stays true |
+| 5 | What state does a working draft of an approved record have? | The same states as any record (draft, owner-confirmed, dpo-reviewed, approved). The record shows "approved, change pending" until the draft is approved and replaces the official version | The agent assumed this and said the spec doesn't state it |
+
+Minor, not asked as questions:
+- A notice that says "EU" with no country: record it, and open a priority-2 gap for the country. The agent did this.
+- A metadata edit on a record with a pending draft: it applies to the record and shows in both the official version and the draft.
