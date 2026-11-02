@@ -65,8 +65,10 @@ stateDiagram-v2
     dpo_reviewed --> approved: approver signs off
     owner_confirmed --> draft: changes requested
     dpo_reviewed --> draft: changes requested
-    approved --> draft: material change, new version
+    approved --> draft: material change opens a new draft
 ```
+
+The approved version stays official, marked "change pending", until the new draft is approved and replaces it. Details and decisions are in [product/workflow-spec.md](../product/workflow-spec.md), sections 4 and 10.
 
 ## 5. Change handling
 
@@ -75,8 +77,8 @@ flowchart LR
     T["Trigger: new vendor, new purpose, retention change, new AI feature, contract update, owner change, review date"] --> R["Route to activity owner and DPO"]
     R --> M{"Does it change an Article 30 field?"}
     M -- No --> N["Log only"]
-    M -- Yes --> Q["Linked records go back to draft, new version"]
-    Q --> V["Owner revalidates, DPO reviews, approver signs off"]
+    M -- Yes --> Q["New working draft. Approved version stays official until replaced. DPO is told"]
+    Q --> V["One owner task and one DPO task per record. Owner revalidates, DPO reviews, approver signs off"]
 ```
 
 ## Which file belongs to which step

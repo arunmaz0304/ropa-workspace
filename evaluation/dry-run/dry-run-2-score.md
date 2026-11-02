@@ -44,7 +44,7 @@ Weak spots:
 
 ### Questions the agent raised about the rules
 
-The agent flagged these as undecidable from the rules. They are product decisions, listed as open questions in `product/workflow-spec.md`:
+The agent flagged these as undecidable from the rules. They were product decisions. Decided afterwards as defaults, see section 10 of `product/workflow-spec.md`:
 1. Who moves a record back to draft on a trigger?
 2. While v2 is a draft, is approved v1 still the official version?
 3. Does a never-approved record get a new version when it returns to draft?
@@ -69,6 +69,6 @@ It does not show a working product. There is no stored state, no notification, n
 
 ## Next
 
-1. Decide the seven open questions.
+1. Confirm or change the seven decisions in section 10 of `product/workflow-spec.md`, then re-run part B against the updated rules.
 2. Shortlist vendors and run the same two tests against them. Part B is the one that separates them.
 3. If no vendor passes the P0 gate, spec the build from `workflow-spec.md`.
