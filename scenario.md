@@ -4,12 +4,14 @@ Use this for every vendor demo and every build test. Fill the framing block firs
 
 ## Framing (Step 0)
 
-- Client / project:
-- Who decides:
-- Primary user (SME owner / privacy lead / external DPO):
-- Replacing what today:
-- Decision deadline:
-- Lane (Evaluate / Build / Both):
+> Example values (synthetic), matching the fictional company in `demo-data/`. Replace them when you use this for a real client.
+
+- Client / project: Lumen Outdoor AB (fictional). Choose a RoPA tool and set up a register that stays current.
+- Who decides: Lumen's managing director, on the recommendation of Anna Berg (external DPO).
+- Primary user (SME owner / privacy lead / external DPO): External DPO (Anna Berg). Business owners (Maja Lindqvist, Erik Holm, Sofia Nyberg) confirm their own activities.
+- Replacing what today: A single Excel register, last updated between 2022 and 2025, with unclear owners and no approval trail.
+- Decision deadline: 15 December 2026.
+- Lane (Evaluate / Build / Both): Both. Evaluate 2 or 3 tools first. Build only if none passes the P0 checks.
 
 ## Test scenario
 
